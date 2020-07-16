@@ -38,7 +38,7 @@ def test_bad_response_aws_check():
 
 @responses.activate
 def test_response_azure_check():
-    mocking_url = 'http://169.254.169.254//scheduledevents?api-version=2019-01-01'
+    mocking_url = 'http://169.254.169.254/scheduledevents?api-version=2019-01-01'
     responses.add(
         responses.GET, mocking_url
     )
@@ -48,7 +48,7 @@ def test_response_azure_check():
 
 @responses.activate
 def test_bad_response_azure_check():
-    mocking_url = 'http://169.254.169.254//scheduledevents?api-version=2019-01-01'
+    mocking_url = 'http://169.254.169.254/scheduledevents?api-version=2019-01-01'
     responses.add(
         responses.GET, mocking_url, status=404,
     )
